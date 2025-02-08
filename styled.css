@@ -112,3 +112,13 @@ nav {
 .add-icon:hover {
     background-color:brown;
 }
+.logo {
+    width: 100px;   /* Set the width of the logo */
+    height: auto;   /* Maintain the aspect ratio */
+    position: absolute; /* Position the logo absolutely */
+    top: 0;          /* Place it at the top of the page */
+    left: 0;         /* Place it at the left of the page */
+    z-index: 10;     /* Ensure the logo stays on top of other elements */
+    padding-left: 10px;
+    padding-top: 10px;
+}
