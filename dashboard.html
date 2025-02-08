@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safespace</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navbar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./report.html">Report</a></li>
+            <li><a href="./add-item.html" class="add-icon">+</a></li> <!-- Add Icon -->
+            <li>
+                <input type="text" id="search-bar" placeholder="Search...">
+                <button class="search-btn" onclick="searchImages()">Search</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Image Gallery Section -->
+    <div class="image-gallery">
+        <!-- Example Image 1 -->
+        <div class="image-item">
+            <a href="./image1.html"><img src="./image1.jpeg" alt="Image 1" class="gallery-image" ></a>
+            <div class="image-details">
+                <h3>willow woods</h3>
+                <p>This is a description of the first image. It gives details about what this image represents and its context.</p>
+            </div>
+        </div>
+
+        <!-- Example Image 2 -->
+        <div class="image-item">
+            <a href="./image2.html"><img src="./image2.jpeg" alt="Image 2" class="gallery-image" ></a>
+            <div class="image-details">
+                <h3>palm haven</h3>
+                <p>This is a description of the second image. It provides information about the subject of this image.</p>
+            </div>
+        </div>
+        <div class="image-item">
+            <a href="./image3.html"><img src="./image3.jpeg" alt="Image 3" class="gallery-image"></a>
+            <div class="image-details">
+                <h3>Sunset shores</h3>
+                <p>This is a description of the first image. It gives details about what this image represents and its context.</p>
+            </div>
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <script>
+        // Simple Search Functionality (this is just a placeholder for demonstration)
+        function searchImages() {
+            const searchTerm = document.getElementById("search-bar").value.toLowerCase();
+            const images = document.querySelectorAll(".image-item");
+            images.forEach(image => {
+                const title = image.querySelector("h3").textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    image.style.display = "block";
+                } else {
+                    image.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

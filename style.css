@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:#4A2C2A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color:blanchedalmond;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Header styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color:#4A2C2A;
+}
+
+/* Input field styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color:#4A2C2A;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Login button styling */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color:#4A2C2A;
+    color:antiquewhite;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-btn a{
+    text-decoration: nones;
+    color:antiquewhite;
+}
+
+.login-btn:hover {
+    background-color: brown;
+}
+
+/* Links styling */
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.links a {
+    text-decoration: none;
+    color:#4A2C2A;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+nav {
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content:right;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color:antiquewhite;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+.logo {
+    width: 100px;   /* Set the width of the logo */
+    height: auto;   /* Maintain the aspect ratio */
+    position: absolute; /* Position the logo absolutely */
+    top: 0;          /* Place it at the top of the page */
+    left: 0;         /* Place it at the left of the page */
+    z-index: 10;     /* Ensure the logo stays on top of other elements */
+    padding-left: 30px;
+    padding-top: 20px;
+}
+

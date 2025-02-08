@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSpace</title>
+    <link rel="stylesheet" href="styleadd.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Your Details</h2>
+        <form action="submit_form.php" method="POST">
+            <!-- Name Input -->
+            <div class="input-group">
+                <label for="name">Hostel name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- ID Input -->
+            <div class="input-group">
+                <label for="id">owner ID</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+
+            <!-- Owner Name Input -->
+            <div class="input-group">
+                <label for="owner-name">Owner Name</label>
+                <input type="text" id="owner-name" name="owner_name" required>
+            </div>
+
+            <!-- Location Input (Map) -->
+            <div class="input-group">
+                <label for="location">Location (Enter Location Name)</label>
+                <input type="text" id="location" name="location" placeholder="Enter Location" required>
+           
+            <!-- Contact Details Input -->
+            <div class="input-group">
+                <label for="contact">Contact Details</label>
+                <input type="text" id="contact" name="contact_details" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Include Map API (for demonstration purposes) -->
+    <script>
+        function initMap() {
+            const defaultLocation = { lat: 40.7128, lng: -74.0060 }; // Default to New York City
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: defaultLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: defaultLocation,
+                map: map,
+                draggable: true,
+            });
+            
+            // Update location field with coordinates when the marker is moved
+            google.maps.event.addListener(marker, "dragend", function() {
+                const position = marker.getPosition();
+                document.getElementById('location').value = `${position.lat()}, ${position.lng()}`;
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
